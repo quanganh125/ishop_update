@@ -1,0 +1,12 @@
+2020-12-22 12:56:51 Error: Fatal Error (1): Class 'Phinx\Console\Command\Create' not found in [/var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Create.php, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 258
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 122
+[main] - [internal], line ??
+
+2020-12-22 12:56:51 Error: [Cake\Error\FatalErrorException] Class 'Phinx\Console\Command\Create' not found in /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Create.php on line 25
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php:122
+- [main] - [internal], line ??
+
+
