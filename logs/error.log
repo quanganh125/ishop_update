@@ -596,3 +596,939 @@ Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
 Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
 [main] - ROOT/webroot/index.php, line 40
 
+2020-12-22 15:14:21 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signinSignup() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signinSignup',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/signin_signup
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:14:58 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signin() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signin',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/signin
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:15:03 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signIn() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signIn',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:15:27 Error: [Cake\View\Exception\MissingTemplateException] Template file `Users/sign_in.php` could not be found.
+
+The following paths were searched:
+
+- `/var/www/html/templates/Users/sign_in.php`
+- `/var/www/html/vendor/cakephp/cakephp/templates/Users/sign_in.php`
+ in Users/sign_in.php on line 1331
+Exception Attributes: array (
+  'file' => 'Users/sign_in.php',
+  'paths' => 
+  array (
+    0 => '/var/www/html/templates/',
+    1 => '/var/www/html/vendor/cakephp/cakephp/templates/',
+  ),
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/View/View.php:748
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:17:36 Error: [Cake\View\Exception\MissingTemplateException] Template file `Users/sign_in.php` could not be found.
+
+The following paths were searched:
+
+- `/var/www/html/templates/Users/sign_in.php`
+- `/var/www/html/vendor/cakephp/cakephp/templates/Users/sign_in.php`
+ in Users/sign_in.php on line 1331
+Exception Attributes: array (
+  'file' => 'Users/sign_in.php',
+  'paths' => 
+  array (
+    0 => '/var/www/html/templates/',
+    1 => '/var/www/html/vendor/cakephp/cakephp/templates/',
+  ),
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/View/View.php:748
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:18:06 Error: [Cake\View\Exception\MissingTemplateException] Template file `Users/sign_in.php` could not be found.
+
+The following paths were searched:
+
+- `/var/www/html/templates/Users/sign_in.php`
+- `/var/www/html/vendor/cakephp/cakephp/templates/Users/sign_in.php`
+ in Users/sign_in.php on line 1331
+Exception Attributes: array (
+  'file' => 'Users/sign_in.php',
+  'paths' => 
+  array (
+    0 => '/var/www/html/templates/',
+    1 => '/var/www/html/vendor/cakephp/cakephp/templates/',
+  ),
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/View/View.php:748
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:21:12 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:21:14 Error: [Cake\Http\Exception\MissingControllerException] Controller class Img could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:249
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /img/log.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:23:26 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:23:28 Error: [Cake\Http\Exception\MissingControllerException] Controller class Img could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:249
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /img/log.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:24:03 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:24:05 Error: [Cake\Http\Exception\MissingControllerException] Controller class Img could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:249
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /img/log.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:26:05 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:26:47 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:27:04 Error: [Cake\Http\Exception\InvalidCsrfTokenException] CSRF token from either the request body or request headers did not match or is missing. in /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php on line 302
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:143
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/login
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:28:12 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:28:28 Error: [Cake\Http\Exception\InvalidCsrfTokenException] CSRF token from either the request body or request headers did not match or is missing. in /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php on line 302
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:143
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/login
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:31:35 Error: [Cake\Http\Exception\InvalidCsrfTokenException] CSRF token from either the request body or request headers did not match or is missing. in /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php on line 302
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:143
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/login
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:32:07 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signinSignup() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signinSignup',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/signin_signup
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:33:35 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signinSignup() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signinSignup',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/signin_signup
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:33:37 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signinSignup() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signinSignup',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/signin_signup
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:33:38 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signinSignup() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signinSignup',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/signin_signup
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:33:39 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signinSignup() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signinSignup',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/signin_signup
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:34:11 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signin() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signin',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/signin
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:34:28 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:34:36 Error: [Cake\Http\Exception\InvalidCsrfTokenException] CSRF token from either the request body or request headers did not match or is missing. in /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php on line 302
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:143
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/login
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:34:55 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:35:10 Error: [Cake\Http\Exception\InvalidCsrfTokenException] CSRF token from either the request body or request headers did not match or is missing. in /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php on line 302
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:143
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/login
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:35:20 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
+2020-12-22 15:37:02 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 500
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:147
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/webroot/index.php:40
+
+Request URL: /users/img/register.svg
+Referer URL: http://localhost:8080/users/sign_in
+Client IP: 172.17.0.1
+
+
