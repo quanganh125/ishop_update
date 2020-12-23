@@ -20,7 +20,6 @@ class UsersController extends AppController
     public function index()
     {
         $users = $this->paginate($this->Users);
-
         $this->set(compact('users'));
     }
 
@@ -28,33 +27,29 @@ class UsersController extends AppController
     {
         $this->viewBuilder()->setLayout('sign_in');
         $session = $this->request->getSession();
-
         if($this->request->is('post')){
             if($this->request->getData('type') == "sign-in"){
                 $sign_in = $this->Users->newEmptyEntity();
                 $sign_in->email = $this->request->getData('email');  
                 $sign_in->password = $this->request->getData('password');   
+                
+                // Check if user exist in database
                 $data = $this->Users->find()
-                                    ->select(['name','user_id'])
+                                    ->select(['name','id'])
                                     ->where(['email' => $sign_in->email, 'password'=>$sign_in->password])
                                     ->toArray();
-            
+                // if exist
                 if(0 !== count($data)){
                     $session->write([
                         'User.id' => $data[0] ->user_id,
                         'User.name' => $data[0]->name,
                         'User.email' => $sign_in->email,
                     ]);
-                    $this->redirect(['controller'=>'Shops',
-                                    'action'=>'postProduct']);
+                    $this->redirect(['controller'=>'Users','action'=>'index']);
                 } else{
                     $this->Flash->error(__('Login fail !'));
-                    $this->redirect(['controller'=>'Users',
-                                    'action'=>'login']);
+                    $this->redirect(['controller'=>'Users','action'=>'signIn']);
                 }
-            }
-            else if($this->request->getData('type') == "sign-up"){
-                $this->add();
             }
         }
     }
@@ -88,7 +83,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller'=>'Users','action' => 'signIn']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
