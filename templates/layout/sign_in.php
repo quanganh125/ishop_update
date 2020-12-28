@@ -42,7 +42,7 @@
               Sign in
             </button>
           </div>
-          <img src="img/register.svg" class="image" alt="" />
+          <img src="/img/register.svg" class="image" alt="" />
         </div>
       </div>
     </div>

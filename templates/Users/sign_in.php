@@ -11,11 +11,11 @@
   <h2 class="title">Sign in</h2>
   <div class="input-field">
     <i class="fas fa-envelope"></i>
-    <input type="text" placeholder="Email" name="email"/>
+    <input type="text" placeholder="Email" name="email" required/>
   </div>
   <div class="input-field">
     <i class="fas fa-lock"></i>
-    <input type="password" placeholder="Password" name="password"/>
+    <input type="password" placeholder="Password" name="password" required/>
   </div>
     <div class="forgot-password">
     <a href="#">Forgot password?</a>
@@ -36,19 +36,19 @@
   <h2 class="title">Sign up</h2>
   <div class="input-field">
     <i class="fas fa-user"></i>
-    <input type="text" placeholder="Username" name="name"/>
+    <input type="text" placeholder="Username" name="name" required/>
   </div>
   <div class="input-field">
     <i class="fas fa-envelope"></i>
-    <input type="email" placeholder="Email" name="email"/>
+    <input type="email" placeholder="Email" name="email" required/>
   </div>
   <div class="input-field">
     <i class="fas fa-lock"></i>
-    <input type="password" placeholder="Password" name="password"/>
+    <input type="password" placeholder="Password" name="password" required/>
 	</div>
   <div class="input-field">
     <i class="fas fa-phone"></i>
-    <input type="text" placeholder="PhoneNumber" name="phonenumber"/>
+    <input type="text" placeholder="PhoneNumber" name="phonenumber" required/>
   </div>
   <input type="submit" class="btn" value="sign-up" name="type"/>
   <p class="social-text">Or Sign up with social platforms</p>
