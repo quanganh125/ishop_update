@@ -13,6 +13,14 @@ use Cake\Http\Session;
  */
 class DashboardsController extends AppController
 {
+    public function initialize(): void
+    {
+        parent::initialize();
+
+        $this->loadComponent('Paginator');
+        $this->loadModel('Products'); 
+        $this->loadModel('Users'); 
+    }
     /**
      * Index method
      *
@@ -21,5 +29,17 @@ class DashboardsController extends AppController
     public function index()
     {
         $this->viewBuilder()->setLayout('home');  
+    }
+
+    public function product(){
+        $iphones = $this->Products->find('all')
+                                ->select()
+                                ->where(['category' => 'iphone']);
+        // $macbooks = $this->Products->find('all',['category' => 'macbook']);
+        // $ipads = $this->Products->find('all',['category' => 'ipad']);
+        // $watches = $this->Products->find('all',['category' => 'watch']);
+        // $airpods = $this->Products->find('all',['category' => 'airpod']);
+        $this->set(['iphones' => $iphones]);
+        $this->viewBuilder()->setLayout('home');
     }
 }

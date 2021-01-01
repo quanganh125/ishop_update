@@ -45,7 +45,7 @@ class UsersController extends AppController
                         'User.name' => $data[0]->name,
                         'User.email' => $sign_in->email,
                     ]);
-                    $this->redirect(['controller'=>'Users','action'=>'index']);
+                    $this->redirect(['controller'=>'Dashboards','action'=>'index']);
                 } else{
                     $this->Flash->error(__('Login fail !'));
                     $this->redirect(['controller'=>'Users','action'=>'signIn']);
