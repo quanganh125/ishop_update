@@ -73,7 +73,7 @@
       <div class="nalika-profile">
         <div class="profile-dtl">
           <a href="#"><img src="/img/notification/4.jpg" alt="" /></a>
-          <h2>Avatar <span class="min-dtn">go here</span></h2>
+          <h2><?= $this->getRequest()->getSession()->read('User.name');?></h2>
         </div>
         <div class="profile-social-dtl">
           <ul class="dtl-social">
@@ -87,7 +87,7 @@
               <nav class="sidebar-nav left-sidebar-menu-pro">
                   <ul class="metismenu" id="menu1">
                       <li class="active"><a class="has-arrow" href="#"><i class="icon nalika-home icon-wrap"></i><span class="mini-click-non">Home Page</span></a></li>
-                      <li> <a class="has-arrow" href="ranking.html" aria-expanded="false"><i class="icon nalika-diamond icon-wrap"></i> <span class="mini-click-non">Product</span></a> </li> 
+                      <li> <a class="has-arrow" href="/dashboards/product" aria-expanded="false"><i class="icon nalika-diamond icon-wrap"></i> <span class="mini-click-non">Product</span></a> </li> 
                       <li><a class="has-arrow" href="history.html" aria-expanded="false"><i class="icon nalika-forms icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">Purchase Order</span></a></li>
                       
                       <li><a class="has-arrow" href="history.html" aria-expanded="false"><i class="fa fa-clock-o text-success icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">History</span></a></li> 
@@ -189,7 +189,7 @@
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                 <li><a href="profile-edit.html"><span class="icon nalika-user author-log-ic"></span> My Profile</a></li>
-                                                <li><a href="/users/sign_in"><span class="icon nalika-unlocked author-log-ic"></span> Log Out</a></li>
+                                                <li><a href="/users/logout"><span class="icon nalika-unlocked author-log-ic"></span> Log Out</a></li>
                                             </ul>
                                         </li>
                                     </ul>

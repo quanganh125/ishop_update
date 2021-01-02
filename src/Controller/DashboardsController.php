@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Http\Session;
+use Cake\Event\EventInterface;
 /**
  * Users Controller
  *
@@ -13,13 +14,15 @@ use Cake\Http\Session;
  */
 class DashboardsController extends AppController
 {
+    
     public function initialize(): void
     {
         parent::initialize();
-
+        // $this->loadComponent('Security');
         $this->loadComponent('Paginator');
         $this->loadModel('Products'); 
         $this->loadModel('Users'); 
+        $this->viewBuilder()->setLayout('home');  
     }
     /**
      * Index method
@@ -28,18 +31,35 @@ class DashboardsController extends AppController
      */
     public function index()
     {
-        $this->viewBuilder()->setLayout('home');  
     }
 
     public function product(){
         $iphones = $this->Products->find('all')
                                 ->select()
                                 ->where(['category' => 'iphone']);
-        // $macbooks = $this->Products->find('all',['category' => 'macbook']);
-        // $ipads = $this->Products->find('all',['category' => 'ipad']);
-        // $watches = $this->Products->find('all',['category' => 'watch']);
-        // $airpods = $this->Products->find('all',['category' => 'airpod']);
-        $this->set(['iphones' => $iphones]);
-        $this->viewBuilder()->setLayout('home');
+        $macbooks = $this->Products->find('all')
+                                ->select()
+                                ->where(['category' => 'macbook']);
+        $ipads = $this->Products->find('all')
+                                ->select()
+                                ->where(['category' => 'ipad']);
+        $watches = $this->Products->find('all')
+                                ->select()
+                                ->where(['category' => 'watch']);
+        $airpods = $this->Products->find('all')
+                                ->select()
+                                ->where(['category' => 'airpod']);
+        $this->set(['iphones' => $iphones,
+                    'ipads' => $ipads,
+                    'macbooks' => $macbooks,
+                    'watches' => $watches,
+                    'airpods' =>$airpods]);
+    }
+
+    public function detail($id = null){
+        $product = $this->Products->find('all', ['contain' => 'Users'])
+                                ->select()
+                                ->where(['Products.id' => $id]);
+        $this->set(['product' => $product]);
     }
 }

@@ -34,8 +34,8 @@ class UsersController extends AppController
                 $sign_in->password = $this->request->getData('password');   
                 
                 // Check if user exist in database
-                $data = $this->Users->find()
-                                    ->select(['name','id'])
+                $data = $this->Users->find('all')
+                                    ->select()
                                     ->where(['email' => $sign_in->email, 'password'=>$sign_in->password])
                                     ->toArray();
                 // if exist
@@ -52,6 +52,13 @@ class UsersController extends AppController
                 }
             }
         }
+    }
+
+    public function logout(){
+        $data = $this->request->getSession();
+        $data->destroy();
+        $this->redirect(['controller'=>'Users',
+                            'action'=>'signIn']);
     }
 
     /**
