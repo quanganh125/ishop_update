@@ -23,8 +23,8 @@ function printElement($arg,$obj){
                             <p class="ellipsis">'. $temp[$i*3+$j]->description .'</p>...
                         </div>';
                     echo $obj->Form->create(null, ['url' => 'dashboards/detail/'.$temp[$i*3+$j]->id]);
-                    echo $obj->Form->button('Seemore',array( 'class' => 'button')).'</form>';
-                    echo '</div> ';
+                    echo $obj->Form->button('Seemore',array( 'class' => 'btn btn-success btn-md')).'</form>';
+                    echo '</div>';
                     echo '</div>';
                 }
             }

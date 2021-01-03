@@ -10,7 +10,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                             <div class="breadcomb-wp">
                                 <div class="breadcomb-icon">
-                                    <i class="icon nalika-home"></i>
+                                    <a href="/dashboards/product"><i class="icon nalika-home"></i></a>
                                 </div>
                                 <div class="breadcomb-ctn">
                                     <h2>Product Details</h2>
@@ -41,87 +41,46 @@
                                 <div class="product-tab-list tab-pane fade active in" id="single-tab1">
                                     <img src="<?=$item->image_link?>" alt="" />
                                 </div>
-                                <div class="product-tab-list tab-pane fade" id="single-tab2">
-                                    <img src="/img/product/bg-2.jpg" alt="" />
-                                </div>
-                                <div class="product-tab-list tab-pane fade" id="single-tab3">
-                                    <img src="/img/product/bg-3.jpg" alt="" />
-                                </div>
-                                <div class="product-tab-list tab-pane fade" id="single-tab4">
-                                    <img src="/img/product/bg-1.jpg" alt="" />
-                                </div>
-                                <div class="product-tab-list tab-pane fade" id="single-tab5">
-                                    <img src="/img/product/bg-2.jpg" alt="" />
-                                </div>
                             </div>
-                            <ul id="single-product-tab">
-                                <li class="active">
-                                    <a href="#single-tab1"><img src="/img/product/1.jpg" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="#single-tab2"><img src="/img/product/2.jpg" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="#single-tab3"><img src="/img/product/3.jpg" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="#single-tab4"><img src="/img/product/1.jpg" alt="" /></a>
-                                </li>
-                            </ul>
                         </div>
                         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                            <!-- <?= $this->Form->create(null, ['url' => 'dashboards/order/'.$temp[$i*3+$j]->id]);?> -->
                             <div class="single-product-details res-pro-tb">
                                 <h1><?=$item->name?></h1>
-                                <!-- <span class="single-pro-star">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </span> -->
                                 <div class="single-pro-price">
                                     <span class="single-regular">$<?=$item->cost;?>.00</span><span class="single-old"><del>$<?=$item->cost*110/100?>.00</del></span>
                                 </div>
                                 <div class="single-pro-size">
-                                    <h6>Size</h6>
-                                    <span>S</span> <span>M</span> <span>L</span> <span>XL</span> <span>XXL</span>
+                                    <h6>products of <?=$item->user->name?>'s store</h6>
                                 </div>
                                 <div class="color-quality-pro">
                                     <div class="color-quality-details">
-                                        <h5>Color</h5>
-                                        <span class="red"></span> <span class="green"></span> <span class="yellow"></span> <span class="black"></span> <span class="white"></span>
+                                        <h5>remaining number</h5>
+                                        <span class="red"><?=$item->total?></span>
                                     </div>
                                     <div class="color-quality">
-                                        <h4>Quality</h4>
+                                        <h4>Quantity</h4>
                                         <div class="quantity">
                                             <div class="pro-quantity-changer">
-                                                <input type="text" value="1" />
+                                                <input type="number" value="1" name="quantity" min="1" max="<?=$item->total?>">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="clear"></div>
-                                    <div class="single-pro-button">
-                                        <div class="pro-button">
-                                            <a href="#">ADD TO Cart</a>
-                                        </div>
-                                        <!-- <div class="pro-viwer">
-                                            <a href="#"><i class="fa fa-heart"></i></a>
-                                            <a href="#"><i class="fa fa-eye"></i></a>
-                                        </div> -->
+                                    <div class="single-pro-button" style="margin: 2%;">
+                                            <?= $this->Form->button('Click to buy',array( 'class' => 'btn-info custom-btn'));?>
+                                       
                                     </div>
                                     <div class="clear"></div>
-                                    <!-- <div class="single-social-area">
-                                        <h3>share this on</h3>
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        <a href="#"><i class="fa fa-feed"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    </div> -->
                                 </div>
                                 <div class="single-pro-cn">
-                                    <h3>OVERVIEW</h3>
+                                    <h3><b>OVERVIEW</b></h3>
                                     <p><?=$item->description?> </p>
+                                </div>
+
+                                <div class="single-pro-cn">
+                                    <h3><b>MODIFIED</b></h3>
+                                    <p><?=date_format($item->modified, 'g:ia \o\n l jS F Y');?> </p>
                                 </div>
                             </div>
                         </div>

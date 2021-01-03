@@ -86,11 +86,10 @@
           <div class="left-custom-menu-adp-wrap comment-scrollbar">
               <nav class="sidebar-nav left-sidebar-menu-pro">
                   <ul class="metismenu" id="menu1">
-                      <li class="active"><a class="has-arrow" href="#"><i class="icon nalika-home icon-wrap"></i><span class="mini-click-non">Home Page</span></a></li>
+                      <li class="active"><a class="has-arrow" href="/dashboards/index"><i class="icon nalika-home icon-wrap"></i><span class="mini-click-non">Home Page</span></a></li>
                       <li> <a class="has-arrow" href="/dashboards/product" aria-expanded="false"><i class="icon nalika-diamond icon-wrap"></i> <span class="mini-click-non">Product</span></a> </li> 
-                      <li><a class="has-arrow" href="history.html" aria-expanded="false"><i class="icon nalika-forms icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">Purchase Order</span></a></li>
-                      
-                      <li><a class="has-arrow" href="history.html" aria-expanded="false"><i class="fa fa-clock-o text-success icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">History</span></a></li> 
+                      <li><a class="has-arrow" href="history.html" aria-expanded="false"><i class="icon nalika-forms icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">Order</span></a></li>     
+                      <li><a class="has-arrow" href="history.html" aria-expanded="false"><i class="icon nalika-table icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">My Store</span></a></li> 
                       <li><a class="has-arrow" href="about-us.html" aria-expanded="false"><i class="icon nalika-bar-chart icon-wrap"></i> <span class="mini-click-non">About us</span></a></li>
                   </ul>
               </nav>

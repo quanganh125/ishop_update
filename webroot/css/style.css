@@ -3762,3 +3762,22 @@ th.fc-day-header.fc-widget-header {
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis; 
 }
+
+.custom-btn{
+    margin: 2%;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 40px;
+    text-align: center;
+    width: 150px;
+    border-radius: 25px;
+    transition: all .4s ease 0s;
+}
+
+.custom-btn:focus{
+    outline: none;
+}
+
