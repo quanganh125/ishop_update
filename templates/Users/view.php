@@ -35,8 +35,8 @@
                     <td><?= h($user->password) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Roll') ?></th>
-                    <td><?= h($user->roll) ?></td>
+                    <th><?= __('Role') ?></th>
+                    <td><?= h($user->role) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>

@@ -33,7 +33,7 @@ class User extends Entity
         'email' => true,
         'phonenumber' => true,
         'password' => true,
-        'roll' => true,
+        'role' => true,
         'products' => true,
     ];
 

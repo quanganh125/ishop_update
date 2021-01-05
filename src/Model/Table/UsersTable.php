@@ -84,9 +84,9 @@ class UsersTable extends Table
             ->notEmptyString('password');
 
         $validator
-            ->scalar('roll')
-            ->maxLength('roll', 255)
-            ->notEmptyString('roll');
+            ->scalar('role')
+            ->maxLength('role', 255)
+            ->notEmptyString('role');
 
         return $validator;
     }

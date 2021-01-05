@@ -3781,3 +3781,10 @@ th.fc-day-header.fc-widget-header {
     outline: none;
 }
 
+.pd-setting-ed:hover{
+    filter: brightness(85%);
+}
+
+.pd-setting-ed:focus{
+    outline: none;
+}

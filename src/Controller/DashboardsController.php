@@ -62,4 +62,12 @@ class DashboardsController extends AppController
                                 ->where(['Products.id' => $id]);
         $this->set(['product' => $product]);
     }
+
+    public function store(){
+        $user_id = $this->getRequest()->getSession()->read('User.id');
+        $product_list = $this->Products->find('all')
+                                    ->select()
+                                    ->where(['user_id' => $user_id]);
+        $this->set(['products' => $product_list,'user_id' => $user_id]);
+    }
 }

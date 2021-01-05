@@ -50,12 +50,24 @@ class ProductsController extends AppController
     public function add()
     {
         $product = $this->Products->newEmptyEntity();
+        $image_object = $this->request->getData('image_link');       
+        $image_name = $image_object->getClientFilename();
+
+        if($image_name != ''){   // if file upload exist => move to /image/category/name
+            $category = $this->request->getData('category'); 
+            $targetPath = WWW_ROOT.'img'.DS.$category.DS.$image_name;
+            $image_object->moveTo($targetPath);
+            $image_link = '/img'.DS.$category.DS.$image_name;
+        } else  $image_link = '/img/product/default.jpg';
         if ($this->request->is('post')) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
+            $product->modified = date("Y-m-d H:i:s");
+            $product->image_link = $image_link;
             if ($this->Products->save($product)) {
                 $this->Flash->success(__('The product has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Dashboards',
+                                        'action' => 'store']);
             }
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
@@ -105,6 +117,7 @@ class ProductsController extends AppController
             $this->Flash->error(__('The product could not be deleted. Please, try again.'));
         }
 
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect(['controller' => 'dashboards',
+                                'action' => 'store']);
     }
 }

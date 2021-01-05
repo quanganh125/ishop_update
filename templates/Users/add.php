@@ -22,7 +22,7 @@
                     echo $this->Form->control('email');
                     echo $this->Form->control('phonenumber');
                     echo $this->Form->control('password');
-                    echo $this->Form->control('roll');
+                    echo $this->Form->control('role');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

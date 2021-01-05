@@ -41,7 +41,7 @@ class UsersController extends AppController
                 // if exist
                 if(0 !== count($data)){
                     $session->write([
-                        'User.id' => $data[0] ->user_id,
+                        'User.id' => $data[0]->id,
                         'User.name' => $data[0]->name,
                         'User.email' => $sign_in->email,
                     ]);
