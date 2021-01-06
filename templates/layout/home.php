@@ -72,7 +72,7 @@
           </div>
       <div class="nalika-profile">
         <div class="profile-dtl">
-          <a href="#"><img src="/img/notification/4.jpg" alt="" /></a>
+          <a href="#"><img src="/img/avatar/default.jfif" alt="" style="height:90px;width:90px;"/></a>
           <h2><?= $this->getRequest()->getSession()->read('User.name');?></h2>
         </div>
         <div class="profile-social-dtl">

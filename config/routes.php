@@ -50,12 +50,13 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, templates/Pages/home.php)...
      */
-    $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    $builder->connect('/', ['controller' => 'Users', 'action' => 'sign_in']);
 
+    // $builder->connect('/', ['controller' => 'Dashboard', 'action' => 'index']);
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    // $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
     /*
      * Connect catchall routes for all controllers.
@@ -73,14 +74,3 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->fallbacks();
 });
 
-/*
- * If you need a different set of middleware or none at all,
- * open new scope and define routes there.
- *
- * ```
- * $routes->scope('/api', function (RouteBuilder $builder) {
- *     // No $builder->applyMiddleware() here.
- *     // Connect API actions here.
- * });
- * ```
- */

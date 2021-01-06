@@ -25,14 +25,14 @@
                         echo '<td>$' . $item->cost .'</td>';
                         echo '<td>' . $item->modified .'</td>';
                         echo '<td style="max-width: 300px">' . $item->description .'</td>';
-                        echo '<td>';
-
-                        echo $this->Form->create();
-                        echo '<button formaction="/products/edit/" data-toggle="tooltip" title="Edit" class="pd-setting-ed" style="background:#f0ad4e">
+                        echo '<td>'; 
+                        
+                        echo '<button data-toggle="tooltip" title="Edit" class="pd-setting-ed" style="background:#f0ad4e;padding: 2px 5px 2px 5px; margin-bottom:3px">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </button>';
-                        
-                        echo '<button formaction="/products/delete/'.$item->id.'" onclick="return confirm(`Are you sure you want to delete this item?`)" title="Trash" class="pd-setting-ed" style="background:#d9534f">
+                        echo $this->Form->create();
+                        echo '<button formaction="/products/delete/'.$item->id.'" onclick="return confirm(`Are you sure you want to delete this item?`)" 
+                                title="Trash" class="pd-setting-ed" style="background:#d9534f;padding: 2px 5px 2px 5px;width:26px">
                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                             </button>';
                         echo '</form></td>';                  
@@ -86,7 +86,7 @@
                                                                 </div>
                                                                 <div class="input-group mg-b-15 mg-t-15">
                                                                     <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
-                                                                    <input type=number class="form-control" placeholder="Price" name="cost" required>
+                                                                    <input type=number class="form-control" placeholder="Price" name="cost" min="1" required>
                                                                 </div>
                                                                 <div class="input-group mg-b-15">
                                                                     <span class="input-group-addon"><i class="icon nalika-pie-chart icon-wrap" aria-hidden="true"></i></span>

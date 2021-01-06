@@ -18,11 +18,23 @@ class DashboardsController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        // $this->loadComponent('Security');
         $this->loadComponent('Paginator');
         $this->loadModel('Products'); 
         $this->loadModel('Users'); 
-        $this->viewBuilder()->setLayout('home');  
+        $this->viewBuilder()->setLayout('home'); 
+    }
+
+    public function isUserSignIn(){
+        $user = $this->getRequest()->getSession()->check('User.id');
+        if(!$user){
+            $this->redirect(['controller' => 'users',
+                            'action' => 'sign_in']);
+        }
+    }
+
+    public function beforeFilter(EventInterface $event)
+    {
+        $this->isUserSignIn(); 
     }
     /**
      * Index method
@@ -65,9 +77,9 @@ class DashboardsController extends AppController
 
     public function store(){
         $user_id = $this->getRequest()->getSession()->read('User.id');
-        $product_list = $this->Products->find('all')
-                                    ->select()
-                                    ->where(['user_id' => $user_id]);
-        $this->set(['products' => $product_list,'user_id' => $user_id]);
+            $product_list = $this->Products->find('all')
+                                        ->select()
+                                        ->where(['user_id' => $user_id]);
+            $this->set(['products' => $product_list,'user_id' => $user_id]);
     }
 }

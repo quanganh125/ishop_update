@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Cake\Event\EventInterface;
 use Cake\Http\Session;
 /**
  * Users Controller
@@ -12,6 +13,18 @@ use Cake\Http\Session;
  */
 class UsersController extends AppController
 {
+    public function isUserSignIn(){
+        $user = $this->getRequest()->getSession()->check('User.id');
+        if($user){
+            $this->redirect(['controller' => 'dashboards',
+                            'action' => 'index']);
+        }
+    }
+
+    public function beforeFilter(EventInterface $event)
+    {
+        $this->isUserSignIn();
+    }
     /**
      * Index method
      *
@@ -21,7 +34,7 @@ class UsersController extends AppController
     {
         $users = $this->paginate($this->Users);
         $this->set(compact('users'));
-    }
+    }  
 
     public function signIn()
     {
@@ -48,7 +61,7 @@ class UsersController extends AppController
                     $this->redirect(['controller'=>'Dashboards','action'=>'index']);
                 } else{
                     $this->Flash->error(__('Login fail !'));
-                    $this->redirect(['controller'=>'Users','action'=>'signIn']);
+                    $this->redirect(['controller'=>'Users','action'=>'sign_in']);
                 }
             }
         }
@@ -58,7 +71,7 @@ class UsersController extends AppController
         $data = $this->request->getSession();
         $data->destroy();
         $this->redirect(['controller'=>'Users',
-                            'action'=>'signIn']);
+                        'action'=>'sign_in']);
     }
 
     /**
@@ -90,7 +103,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
-                return $this->redirect(['controller'=>'Users','action' => 'signIn']);
+                return $this->redirect(['controller'=>'Users','action' => 'sign_in']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }

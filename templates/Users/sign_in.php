@@ -4,9 +4,8 @@
  * @var \App\Model\Entity\User $user
  */
 ?>       
-<?=$this->Form->create(null, [
-          'action' => 'signIn',
-          'class' => 'sign-in-form']);?>        
+<?=$this->Form->create(null, ['url' => ['controller' => 'Users','action' => 'sign_in'],
+                              'class' => 'sign-in-form']);?>        
            
   <h2 class="title">Sign in</h2>
   <div class="input-field">
@@ -29,9 +28,8 @@
 <?= $this->Form->end(); ?>
       
 
-<?=$this->Form->create(null, [
-          'action' => 'add',
-          'class' => 'sign-up-form']); ?>
+<?=$this->Form->create(null, ['url' => ['controller' => 'Users','action' => 'add'],
+                              'class' => 'sign-up-form']);?>    
     
   <h2 class="title">Sign up</h2>
   <div class="input-field">

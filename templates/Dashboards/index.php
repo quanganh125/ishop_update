@@ -38,7 +38,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
                 <div class="page-header-warpper" id="showSlide" style="position: relative;">
                     <div class="page-header-image">
-                        <img src="/img/ipads/ipad.png" id="page-header-img" class= "page-header-img" alt="header-image">
+                        <img src="/img/ipad/ipad.png" id="page-header-img" class= "page-header-img" alt="header-image">
                     </div>
                     
                     <div class="page-header-content" style="position: absolute;top: 40%; width: 100%;text-align: center">
@@ -53,11 +53,11 @@
         </div>
         <script>
             var images = [
-                "/img/watches/applewatch.jpg",
-                "/img/macbooks/macbook.jpg",
-                "/img/airpods/airpod.jpg",
-                "/img/iphones/iphone.png",
-                "/img/ipads/ipad.png"
+                "/img/watch/applewatch.jpg",
+                "/img/macbook/macbook.jpg",
+                "/img/airpod/airpod.jpg",
+                "/img/iphone/iphone.png",
+                "/img/ipad/ipad.png"
             ]
 
             var imageHead = document.getElementById('page-header-img');
@@ -72,7 +72,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="personal-info-wrap personal-info-ano res-mg-t-30">
                     <div class="widget-head-info-box grid-item">
-                        <img src="/img/iphones/IPX_2.jpg" alt="iphone">      
+                        <img src="/img/iphone/IPX_2.jpg" alt="iphone">      
                     </div>                         
                     <div class="widget-text-box">
                         <h4>Iphone</h4>
@@ -89,7 +89,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="personal-info-wrap personal-info-ano res-mg-t-30">
                     <div class="widget-head-info-box grid-item">
-                        <img src="/img/macbooks/MB13_2020.jpg" alt="macbook">   
+                        <img src="/img/macbook/MB13_2020.jpg" alt="macbook">   
                     </div>   
                     <div class="widget-text-box">
                         <h4>Macbook</h4>
@@ -106,7 +106,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="personal-info-wrap personal-info-ano res-mg-t-30">
                     <div class="widget-head-info-box grid-item">
-                        <img src="/img/ipads/ipad.png" alt="ipad">  
+                        <img src="/img/ipad/ipad.png" alt="ipad">  
                     </div>    
                     <div class="widget-text-box">
                         <h4>Ipad</h4>
@@ -124,7 +124,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="personal-info-wrap personal-info-ano res-mg-t-30">
                     <div class="widget-head-info-box grid-item">
-                        <img src="/img/watches/watchS4_1.jpg" alt="watch">   
+                        <img src="/img/watch/watchS4_1.jpg" alt="watch">   
                     </div>   
                     <div class="widget-text-box">
                         <h4>Apple Watch</h4>
@@ -141,7 +141,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="personal-info-wrap personal-info-ano res-mg-t-30">
                     <div class="widget-head-info-box grid-item">
-                        <img src="/img/airpods/AP4.jpg" alt="airpod"> 
+                        <img src="/img/airpod/AP4.jpg" alt="airpod"> 
                     </div>     
                     <div class="widget-text-box">
                         <h4>Airpod</h4>
