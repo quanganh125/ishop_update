@@ -18,7 +18,7 @@ class UsersController extends AppController
         if($user){
             $this->redirect(['controller' => 'dashboards',
                             'action' => 'index']);
-        }
+        } 
     }
 
     public function beforeFilter(EventInterface $event)
@@ -30,18 +30,18 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function index()
-    {
-        $users = $this->paginate($this->Users);
-        $this->set(compact('users'));
-    }  
+    // public function index()
+    // {
+    //     $users = $this->paginate($this->Users);
+    //     $this->set(compact('users'));
+    // }  
 
     public function signIn()
     {
         $this->viewBuilder()->setLayout('sign_in');
         $session = $this->request->getSession();
         if($this->request->is('post')){
-            if($this->request->getData('type') == "sign-in"){
+            if($this->request->getData('type') == "sign-in"){ 
                 $sign_in = $this->Users->newEmptyEntity();
                 $sign_in->email = $this->request->getData('email');  
                 $sign_in->password = $this->request->getData('password');   
@@ -57,6 +57,7 @@ class UsersController extends AppController
                         'User.id' => $data[0]->id,
                         'User.name' => $data[0]->name,
                         'User.email' => $sign_in->email,
+                        'User.role' => $data[0]->role
                     ]);
                     $this->redirect(['controller'=>'Dashboards','action'=>'index']);
                 } else{
@@ -68,8 +69,7 @@ class UsersController extends AppController
     }
 
     public function logout(){
-        $data = $this->request->getSession();
-        $data->destroy();
+        $data = $this->request->getSession()->delete('User');
         $this->redirect(['controller'=>'Users',
                         'action'=>'sign_in']);
     }
@@ -141,16 +141,18 @@ class UsersController extends AppController
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    public function delete()
     {
+        $id = $this->request->getSession()->read('User.id');
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
         if ($this->Users->delete($user)) {
             $this->Flash->success(__('The user has been deleted.'));
+            $data = $this->request->getSession()->delete('User');
+            return $this->redirect(['controller' => 'users', 
+                                    'action' => 'sign_in']);
         } else {
             $this->Flash->error(__('The user could not be deleted. Please, try again.'));
         }
-
-        return $this->redirect(['action' => 'index']);
     }
 }

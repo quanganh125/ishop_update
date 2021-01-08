@@ -20,11 +20,11 @@
     <a href="#">Forgot password?</a>
   </div>
     <input type="submit" value="sign-in" class="btn solid" name="type"/>
-    <p class="social-text">Or Sign in with social platforms</p>
+    <!-- <p class="social-text">Or Sign in with social platforms</p>
   <div class="social-media">
       <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
       <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-  </div>
+  </div> -->
 <?= $this->Form->end(); ?>
       
 
@@ -49,9 +49,9 @@
     <input type="text" placeholder="PhoneNumber" name="phonenumber" required/>
   </div>
   <input type="submit" class="btn" value="sign-up" name="type"/>
-  <p class="social-text">Or Sign up with social platforms</p>
+  <!-- <p class="social-text">Or Sign up with social platforms</p>
   <div class="social-media">
     <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
     <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-  </div>
+  </div> -->
 <?= $this->Form->end(); ?>

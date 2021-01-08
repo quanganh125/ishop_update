@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
@@ -33,4 +33,4 @@
             <?= $this->Form->end() ?>
         </div>
     </div>
-</div>
+</div> -->

@@ -187,7 +187,7 @@
                                                     <span class="admin-name">Advance Settings</span>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                <li><a href="profile-edit.html"><span class="icon nalika-user author-log-ic"></span> My Profile</a></li>
+                                                <li><a href="/dashboards/userprofile"><span class="icon nalika-user author-log-ic"></span> My Profile</a></li>
                                                 <li><a href="/users/logout"><span class="icon nalika-unlocked author-log-ic"></span> Log Out</a></li>
                                             </ul>
                                         </li>

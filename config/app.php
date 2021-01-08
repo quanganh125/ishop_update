@@ -330,7 +330,7 @@ return [
             'port' => '3306',
             'username' => 'root',
             'password' => '',
-            'database' => 'ishop',
+            'database' => 'ishop-v2',
 
             /**
              * You can use a DSN string to set the entire configuration

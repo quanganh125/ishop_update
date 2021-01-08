@@ -10,3 +10,45 @@ Stack Trace:
 - [main] - [internal], line ??
 
 
+2021-01-07 05:20:04 Error: [Symfony\Component\Console\Exception\NamespaceNotFoundException] There are no commands defined in the "migarte" namespace. in /var/www/html/vendor/symfony/console/Application.php on line 574
+Stack Trace:
+- /var/www/html/vendor/symfony/console/Application.php:625
+- /var/www/html/vendor/symfony/console/Application.php:228
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-07 05:20:18 Error: [Symfony\Component\Console\Exception\NamespaceNotFoundException] There are no commands defined in the "migrate" namespace. in /var/www/html/vendor/symfony/console/Application.php on line 574
+Stack Trace:
+- /var/www/html/vendor/symfony/console/Application.php:625
+- /var/www/html/vendor/symfony/console/Application.php:228
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-07 05:22:48 Error: [Symfony\Component\Console\Exception\NamespaceNotFoundException] There are no commands defined in the "migrate" namespace. in /var/www/html/vendor/symfony/console/Application.php on line 574
+Stack Trace:
+- /var/www/html/vendor/symfony/console/Application.php:625
+- /var/www/html/vendor/symfony/console/Application.php:228
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
