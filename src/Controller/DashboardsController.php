@@ -19,6 +19,7 @@ class DashboardsController extends AppController
     {
         parent::initialize();
         $this->loadComponent('Paginator');
+        $this->loadComponent('Flash');
         $this->loadModel('Products'); 
         $this->loadModel('Users'); 
         $this->viewBuilder()->setLayout('home'); 

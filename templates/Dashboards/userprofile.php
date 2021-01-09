@@ -132,30 +132,32 @@
                                         <div class="review-content-section">
                                             <div class="card-block">
                                                 <div class="text-muted f-w-400" style="margin-bottom: 4%;">
-                                                    <p>You can change username and avatar below:</p>
+                                                    <p>You can change profile below:</p>
                                                 </div>
                                                 <div class="m-t-10"></div>
-
-
-                                                <div class="input-group mg-b-15">
-                                                    <span class="input-group-addon"><i class="icon nalika-mail" aria-hidden="true"></i></span>
-                                                    <label type="text" class="form-control"><?=$profile->email?></label>
-                                                </div>
-
+                                                <?=$this->Form->create(null, ['url' => 'users/edit/']);?>
+                                                    <div class="input-group mg-b-15" title="unable to change email">
+                                                        <span class="input-group-addon"><i class="icon nalika-mail" aria-hidden="true"></i></span>
+                                                        <label type="text" class="form-control"><?=$profile->email?></label>
+                                                    </div>
+                                                    <div class="input-group mg-b-15 mg-t-15">
+                                                        <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control" placeholder="User Name" value="<?=$profile->name?>">
+                                                    </div>
+                                                    <div class="input-group mg-b-15 mg-t-15">
+                                                        <span class="input-group-addon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control" placeholder="Phone Number" value="<?=$profile->phonenumber?>">
+                                                    </div>
+                                                    <div class="input-group mg-b-15">
+                                                        <span class="input-group-addon"><i class="icon nalika-picture" aria-hidden="true"></i></span>
+                                                        <input type="file" class="form-control" placeholder="Avatar">
+                                                    </div>
                                                 
-                                                <div class="input-group mg-b-15">
-                                                    <span class="input-group-addon"><i class="icon nalika-picture" aria-hidden="true"></i></span>
-                                                    <input type="file" class="form-control" placeholder="Avatar">
-                                                </div>
-
-                                                <div class="input-group mg-b-15 mg-t-15">
-                                                    <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
-                                                    <input type="text" class="form-control" placeholder="User Name">
-                                                </div>
-                                                <div class="button-style-four btn-mg-b-10 aligncenter">
-                                                    <button type="button" class="btn btn-custon-four btn-primary aligncenter">
-                                                    Save change  <i class="fa fa-info-circle adminpro-informatio " aria-hidden="true"></i></button>
-                                                </div>                                                        
+                                                    <div class="button-style-four btn-mg-b-10 aligncenter">
+                                                        <button type="button" class="btn btn-custon-four btn-primary aligncenter">
+                                                        Save change  <i class="fa fa-info-circle adminpro-informatio " aria-hidden="true"></i></button>
+                                                    </div> 
+                                                </form>                                                       
                                             </div>
                                         </div>
                                     </div>
@@ -173,20 +175,26 @@
                                                     <p>You can change password below:</p>
                                                 </div>
                                                 <div class="m-t-10"></div>
+                                                <?=$this->Form->create(null, ['url' => 'users/change_password/']);?>
+                                                    <div class="input-group mg-b-15">
+                                                        <span class="input-group-addon" style="padding-left: 17px;"><i class="fa fa-unlock-alt"></i></span>
+                                                        <input type="password" class="form-control" placeholder="Current Password" name="cur_pass" required>
+                                                    </div>
 
-                                                <div class="input-group mg-b-15">
-                                                    <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
-                                                    <input type="text" class="form-control" placeholder="Password">
-                                                </div>
+                                                    <div class="input-group mg-b-15">
+                                                        <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
+                                                        <input type="password" class="form-control" placeholder="New Password" name="new_pass" required>
+                                                    </div>
 
-                                                <div class="input-group mg-b-15">
-                                                    <span class="input-group-addon"><i class="icon nalika-pie-chart icon-wrap" aria-hidden="true"></i></span>
-                                                    <input type="text" class="form-control" placeholder="Confirm password">
-                                                </div>
-                                                <div class="button-style-four btn-mg-b-10 aligncenter">
-                                                    <button type="button" class="btn btn-custon-four btn-primary aligncenter">
-                                                    Change password  <i class="fa fa-info-circle adminpro-informatio " aria-hidden="true"></i></button>
-                                                </div>                                                      
+                                                    <div class="input-group mg-b-15">
+                                                        <span class="input-group-addon"><i class="icon nalika-pie-chart icon-wrap" aria-hidden="true"></i></span>
+                                                        <input type="password" class="form-control" placeholder="Confirm password" name="cf_pass" required>
+                                                    </div>
+                                                    <div class="button-style-four btn-mg-b-10 aligncenter">
+                                                        <button type="submit" class="btn btn-custon-four btn-primary aligncenter">
+                                                        Change password  <i class="fa fa-info-circle adminpro-informatio " aria-hidden="true"></i></button>
+                                                    </div>  
+                                                </form>                                                    
                                             </div>
                                         </div>
                                     </div>

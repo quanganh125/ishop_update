@@ -3788,3 +3788,7 @@ th.fc-day-header.fc-widget-header {
 .pd-setting-ed:focus{
     outline: none;
 }
+
+.card-block input::placeholder{
+    color: lightslategrey !important;
+}

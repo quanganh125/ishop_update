@@ -20,11 +20,16 @@ class UsersController extends AppController
                             'action' => 'index']);
         } 
     }
-
-    public function beforeFilter(EventInterface $event)
+    public function initialize(): void
     {
-        $this->isUserSignIn();
+        parent::initialize();
+        $this->loadComponent('Flash');
     }
+
+    // public function beforeFilter(EventInterface $event)
+    // {
+    //     $this->isUserSignIn();
+    // }
     /**
      * Index method
      *
@@ -38,6 +43,7 @@ class UsersController extends AppController
 
     public function signIn()
     {
+        $this->isUserSignIn();
         $this->viewBuilder()->setLayout('sign_in');
         $session = $this->request->getSession();
         if($this->request->is('post')){
@@ -133,6 +139,30 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
+
+    public function changePassword()
+    {
+        $id = $this->request->getSession()->read('User.id');
+        $user = $this->Users->get($id, [
+            'contain' => [],
+        ]);
+        if($this->request->is(['patch', 'post', 'put'])){
+            $cur_pass = $this->request->getData('cur_pass');
+            $new_pass = $this->request->getData('new_pass');
+            $cf_pass = $this->request->getData('cf_pass');
+            if($new_pass !== $cf_pass || $cur_pass != $user->password){      
+                $this->Flash->error(__('Confirm password is difference from password or current password is wrong. Please try again'));     
+                return $this->redirect(['controller' => 'dashboards', 'action' => 'userprofile']);
+            } else {
+                $user->password = $new_pass;
+                if ($this->Users->save($user)) {
+                    $this->Flash->success(__('New password has been saved.'));
+                    return $this->redirect(['controller' => 'dashboards', 'action' => 'userprofile']);
+                }
+                $this->Flash->error(__('Something wrong!!!. Please try again.'));
+            }
+        }
+     }
 
     /**
      * Delete method
