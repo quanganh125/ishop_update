@@ -148,6 +148,7 @@ class UsersController extends AppController
                $user->avatar = $new_avatar_name;
                 if ($this->Users->save($user)) {
                     $this->Flash->success(__('The user has been saved.'));
+                    $this->request->getSession()->write(['User' => $user]);
                     return $this->redirect(['controller' => 'dashboards','action' => 'userprofile']);
                 }
                 $this->Flash->error(__('The user could not be saved. Please, try again.'));

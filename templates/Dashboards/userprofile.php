@@ -1,4 +1,4 @@
-<?php $profile = $user->toArray()[0]?>
+<?php $profile = $this->request->getSession()->read('User')?>
 <div class="header-advance-area">
     <!--Mobile Menu start-->
     <div class="mobile-menu-area">

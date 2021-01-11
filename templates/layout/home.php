@@ -62,7 +62,7 @@
 		============================================ -->
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<?php $profile = $user->toArray()[0]?>
+<?php $profile = $this->request->getSession()->read('User')?>
 <body>
   <div class="left-sidebar-pro">
       <nav id="sidebar" class="">
