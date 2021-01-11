@@ -54,7 +54,7 @@
                     <div class="breadcome-list">
                         <div class="row z-depth-3">
                             <div class="profile-user-pic aligncenter">
-                                <img src="/img/avatar/default.jfif" width="350px" alt="user avatar" class="img-responsive img-circle">
+                                <img src="<?=$profile->avatar?>" width="350px" alt="user avatar" class="img-responsive img-circle">
                             </div>
                             <div class="profile-user-title text-center" style="color: white">
                                 <div class="profile-user-name ">
@@ -89,20 +89,6 @@
                                 <p class="font-weight-bold" style="font-size: medium;color: white"><i class="fa fa-hand-paper-o"></i>  <span class="mini-click-non">User ID</span></p>
                                 <h4 class="text-info"><?=$profile->id?></h4>
                             </div> 
-    
-                    <!-- </div>
-                        <hr class="badge-light mt-0 w-30">
-                        <div class="row" style="margin-bottom: 3%">
-                            <div class="col-md-6">
-                                <p class="font-weight-bold" style="font-size: medium; color: white"><i class="fa fa-credit-card"></i>  <span class="mini-click-non">Job:</span></p>
-                                <h4 class="text-info">Example Workplace</h4>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="font-weight-bold" style="font-size: medium; color: white"><i class="fa fa-users"></i>  <span class="mini-click-non">Workplace:</span></p>
-                                <h4 class="text-info">Example Workplace</h4>
-                            </div>
-                        </div>-->
-                        
                     </div> 
                     <hr class="badge-light mt-0 w-30">l
                 </div>
@@ -135,26 +121,28 @@
                                                     <p>You can change profile below:</p>
                                                 </div>
                                                 <div class="m-t-10"></div>
-                                                <?=$this->Form->create(null, ['url' => 'users/edit/']);?>
+                                                <?= $this->Form->create(null, ['type'=>'file',
+                                                                                'url' => ['controller' => 'Users',
+                                                                                        'action' => 'edit']]);?>
                                                     <div class="input-group mg-b-15" title="unable to change email">
                                                         <span class="input-group-addon"><i class="icon nalika-mail" aria-hidden="true"></i></span>
                                                         <label type="text" class="form-control"><?=$profile->email?></label>
                                                     </div>
                                                     <div class="input-group mg-b-15 mg-t-15">
                                                         <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="User Name" value="<?=$profile->name?>">
+                                                        <input type="text" class="form-control" placeholder="User Name" value="<?=$profile->name?>" name="new_name" required>
                                                     </div>
                                                     <div class="input-group mg-b-15 mg-t-15">
                                                         <span class="input-group-addon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Phone Number" value="<?=$profile->phonenumber?>">
+                                                        <input type="text" class="form-control" placeholder="Phone Number" value="<?=$profile->phonenumber?>" name="new_phonenumber" required>
                                                     </div>
                                                     <div class="input-group mg-b-15">
                                                         <span class="input-group-addon"><i class="icon nalika-picture" aria-hidden="true"></i></span>
-                                                        <input type="file" class="form-control" placeholder="Avatar">
+                                                        <input type="file" class="form-control" placeholder="Avatar" name="new_avatar">
                                                     </div>
                                                 
                                                     <div class="button-style-four btn-mg-b-10 aligncenter">
-                                                        <button type="button" class="btn btn-custon-four btn-primary aligncenter">
+                                                        <button type="submit" class="btn btn-custon-four btn-primary aligncenter">
                                                         Save change  <i class="fa fa-info-circle adminpro-informatio " aria-hidden="true"></i></button>
                                                     </div> 
                                                 </form>                                                       

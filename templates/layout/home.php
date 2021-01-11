@@ -62,7 +62,7 @@
 		============================================ -->
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-
+<?php $profile = $user->toArray()[0]?>
 <body>
   <div class="left-sidebar-pro">
       <nav id="sidebar" class="">
@@ -72,8 +72,8 @@
           </div>
       <div class="nalika-profile">
         <div class="profile-dtl">
-          <a href="#"><img src="/img/avatar/default.jfif" alt="" style="height:90px;width:90px;"/></a>
-          <h2><?= $this->getRequest()->getSession()->read('User.name');?></h2>
+          <a href="#"><img src="<?= $profile->avatar?>" alt="" style="height:90px;width:90px;"/></a>
+          <h2><?= $profile->name?></h2>
         </div>
         <div class="profile-social-dtl">
           <ul class="dtl-social">

@@ -14,11 +14,7 @@ use Cake\Http\Session;
 class UsersController extends AppController
 {
     public function isUserSignIn(){
-        $user = $this->getRequest()->getSession()->check('User.id');
-        if($user){
-            $this->redirect(['controller' => 'dashboards',
-                            'action' => 'index']);
-        } 
+        return $this->getRequest()->getSession()->check('User.id');
     }
     public function initialize(): void
     {
@@ -43,41 +39,42 @@ class UsersController extends AppController
 
     public function signIn()
     {
-        $this->isUserSignIn();
-        $this->viewBuilder()->setLayout('sign_in');
-        $session = $this->request->getSession();
-        if($this->request->is('post')){
-            if($this->request->getData('type') == "sign-in"){ 
-                $sign_in = $this->Users->newEmptyEntity();
-                $sign_in->email = $this->request->getData('email');  
-                $sign_in->password = $this->request->getData('password');   
-                
-                // Check if user exist in database
-                $data = $this->Users->find('all')
-                                    ->select()
-                                    ->where(['email' => $sign_in->email, 'password'=>$sign_in->password])
-                                    ->toArray();
-                // if exist
-                if(0 !== count($data)){
-                    $session->write([
-                        'User.id' => $data[0]->id,
-                        'User.name' => $data[0]->name,
-                        'User.email' => $sign_in->email,
-                        'User.role' => $data[0]->role
-                    ]);
-                    $this->redirect(['controller'=>'Dashboards','action'=>'index']);
-                } else{
-                    $this->Flash->error(__('Login fail !'));
-                    $this->redirect(['controller'=>'Users','action'=>'sign_in']);
+        if($this->isUserSignIn()){
+            $this->redirect(['controller'=>'Dashboards','action'=>'index']);
+        } else {
+            $this->viewBuilder()->setLayout('sign_in');
+            $session = $this->request->getSession();
+            if($this->request->is('post')){
+                if($this->request->getData('type') == "sign-in"){ 
+                    $sign_in = $this->Users->newEmptyEntity();
+                    $sign_in->email = $this->request->getData('email');  
+                    $sign_in->password = $this->request->getData('password');   
+                    
+                    // Check if user exist in database
+                    $data = $this->Users->find('all')
+                                        ->select()
+                                        ->where(['email' => $sign_in->email, 'password'=>$sign_in->password])
+                                        ->toArray();
+                    // if exist
+                    if(0 !== count($data)){
+                        $session->write([
+                            'User' => $data[0],
+                        ]);
+                        $this->redirect(['controller'=>'Dashboards','action'=>'index']);
+                    } else{
+                        $this->Flash->error(__('Login fail !'));
+                        $this->redirect(['controller'=>'Users','action'=>'sign_in']);
+                    }
                 }
             }
         }
     }
 
     public function logout(){
-        $data = $this->request->getSession()->delete('User');
-        $this->redirect(['controller'=>'Users',
-                        'action'=>'sign_in']);
+        if($this->isUserSignIn()){
+            $data = $this->request->getSession()->delete('User');
+           return  $this->redirect(['controller'=>'Users','action'=>'sign_in']);
+        } else return  $this->redirect(['controller'=>'Users','action'=>'sign_in']);
     }
 
     /**
@@ -87,14 +84,14 @@ class UsersController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
-    {
-        $user = $this->Users->get($id, [
-            'contain' => ['Products'],
-        ]);
+    // public function view($id = null)
+    // {
+    //     $user = $this->Users->get($id, [
+    //         'contain' => ['Products'],
+    //     ]);
 
-        $this->set(compact('user'));
-    }
+    //     $this->set(compact('user'));
+    // }
 
     /**
      * Add method
@@ -103,17 +100,21 @@ class UsersController extends AppController
      */
     public function add()
     {
-        $user = $this->Users->newEmptyEntity();
-        if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+        if($this->isUserSignIn()){
+            return $this->redirect(['controller'=>'Dashboards','action' => 'index']);
+        } else {
+            $user = $this->Users->newEmptyEntity();
+            if ($this->request->is('post')) {
+                $user = $this->Users->patchEntity($user, $this->request->getData());
+                if ($this->Users->save($user)) {
+                    $this->Flash->success(__('The user has been saved.'));
 
-                return $this->redirect(['controller'=>'Users','action' => 'sign_in']);
+                    return $this->redirect(['controller'=>'Users','action' => 'sign_in']);
+                }
+                $this->Flash->error(__('The user could not be saved. Please, try again.'));
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->set(compact('user'));
         }
-        $this->set(compact('user'));
     }
 
     /**
@@ -123,43 +124,60 @@ class UsersController extends AppController
      * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function edit()
     {
-        $user = $this->Users->get($id, [
-            'contain' => [],
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+        if(!$this->isUserSignIn()){
+            $this->redirect(['controller'=>'Users','action'=>'sign_in']);
+        } else {
+            $id = $this->request->getSession()->read('User.id'); 
+            $user = $this->Users->get($id, ['contain' => [],]);
+            if ($this->request->is(['patch', 'post', 'put'])) {
+                $new_name = $this->request->getData('new_name');
+                $new_phonenumber = $this->request->getData('new_phonenumber');
+                $new_avatar = $this->request->getData('new_avatar');
+                $new_avatar_name = $new_avatar->getClientFileName();
+                if ($new_avatar_name == ''){
+                    $new_avatar_name = $user->avatar;
+                } else {
+                    $targetPath = WWW_ROOT.'img'.DS.'avatar'.DS.$new_avatar_name;
+                    $new_avatar->moveTo($targetPath);
+                    $new_avatar_name = '/img/avatar/' . $new_avatar_name;
+                }
+               $user->name = $new_name;
+               $user->phonenumber = $new_phonenumber;
+               $user->avatar = $new_avatar_name;
+                if ($this->Users->save($user)) {
+                    $this->Flash->success(__('The user has been saved.'));
+                    return $this->redirect(['controller' => 'dashboards','action' => 'userprofile']);
+                }
+                $this->Flash->error(__('The user could not be saved. Please, try again.'));
+                return $this->redirect(['controller' => 'dashboards','action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
-        $this->set(compact('user'));
     }
 
     public function changePassword()
     {
-        $id = $this->request->getSession()->read('User.id');
-        $user = $this->Users->get($id, [
-            'contain' => [],
-        ]);
-        if($this->request->is(['patch', 'post', 'put'])){
-            $cur_pass = $this->request->getData('cur_pass');
-            $new_pass = $this->request->getData('new_pass');
-            $cf_pass = $this->request->getData('cf_pass');
-            if($new_pass !== $cf_pass || $cur_pass != $user->password){      
-                $this->Flash->error(__('Confirm password is difference from password or current password is wrong. Please try again'));     
-                return $this->redirect(['controller' => 'dashboards', 'action' => 'userprofile']);
-            } else {
-                $user->password = $new_pass;
-                if ($this->Users->save($user)) {
-                    $this->Flash->success(__('New password has been saved.'));
-                    return $this->redirect(['controller' => 'dashboards', 'action' => 'userprofile']);
+        if(!$this->isUserSignIn()){
+            $this->redirect(['controller'=>'Users','action'=>'sign_in']);
+        } else {
+            $id = $this->request->getSession()->read('User.id');
+            $user = $this->Users->get($id, ['contain' => [] ]);
+            if($this->request->is(['patch', 'post', 'put'])){
+                $cur_pass = $this->request->getData('cur_pass');
+                $new_pass = $this->request->getData('new_pass');
+                $cf_pass = $this->request->getData('cf_pass');
+                if($new_pass !== $cf_pass || $cur_pass != $user->password){      
+                    $this->Flash->error(__('Confirm password is difference from password or current password is wrong. Please try again'));     
+                    return $this->redirect(['controller' => 'dashboards', 'action' => 'index']);
+                } else {
+                    $user->password = $new_pass;
+                    if ($this->Users->save($user)) {
+                        $this->Flash->success(__('New password has been saved.'));
+                        return $this->redirect(['controller' => 'dashboards', 'action' => 'userprofile']);
+                    }
+                    $this->Flash->error(__('Something wrong!!!. Please try again.'));
                 }
-                $this->Flash->error(__('Something wrong!!!. Please try again.'));
             }
         }
      }
@@ -173,16 +191,20 @@ class UsersController extends AppController
      */
     public function delete()
     {
-        $id = $this->request->getSession()->read('User.id');
-        $this->request->allowMethod(['post', 'delete']);
-        $user = $this->Users->get($id);
-        if ($this->Users->delete($user)) {
-            $this->Flash->success(__('The user has been deleted.'));
-            $data = $this->request->getSession()->delete('User');
-            return $this->redirect(['controller' => 'users', 
-                                    'action' => 'sign_in']);
-        } else {
-            $this->Flash->error(__('The user could not be deleted. Please, try again.'));
+        if(!$this->isUserSignIn()){
+            $this->redirect(['controller'=>'Users','action'=>'sign_in']);
+        } else { 
+            $id = $this->request->getSession()->read('User.id');
+            $this->request->allowMethod(['post', 'delete']);
+            $user = $this->Users->get($id);
+            if ($this->Users->delete($user)) {
+                $this->Flash->success(__('The user has been deleted.'));
+                $data = $this->request->getSession()->delete('User');
+                return $this->redirect(['controller' => 'users', 
+                                        'action' => 'sign_in']);
+            } else {
+                $this->Flash->error(__('The user could not be deleted. Please, try again.'));
+            }
         }
     }
 }

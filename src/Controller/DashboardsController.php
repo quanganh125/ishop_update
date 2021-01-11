@@ -45,6 +45,11 @@ class DashboardsController extends AppController
      */
     public function index()
     {
+        $id = $this->request->getSession()->read('User.id'); 
+        $user = $this->Users->find('all')
+                            ->select()
+                            ->where(['id' => $id]);
+        $this->set(['user' => $user]);
     }
 
     public function product(){
