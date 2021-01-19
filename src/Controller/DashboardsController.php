@@ -17,7 +17,7 @@ class DashboardsController extends AppController
     
     public function initialize(): void
     {
-        parent::initialize();
+        // parent::initialize();
         $this->loadComponent('Paginator');
         $this->loadComponent('Flash');
         $this->loadModel('Products'); 

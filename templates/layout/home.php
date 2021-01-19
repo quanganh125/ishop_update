@@ -72,7 +72,7 @@
           </div>
       <div class="nalika-profile">
         <div class="profile-dtl">
-          <a href="#"><img src="<?= $profile->avatar?>" alt="" style="height:90px;width:90px;"/></a>
+          <a href="/dashboards/userprofile"><img src="<?= $profile->avatar?>" alt="" style="height:90px;width:90px;"/></a>
           <h2><?= $profile->name?></h2>
         </div>
         <div class="profile-social-dtl">

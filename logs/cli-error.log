@@ -52,3 +52,216 @@ Stack Trace:
 
 
 
+2021-01-13 07:16:32 Error: [InvalidArgumentException] The migration class name "addOrderStatus" is invalid. Please use CamelCase format. in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Create.php on line 174
+Stack Trace:
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Create.php:75
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-13 08:43:01 Error: [PDOException] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'order_statuses' already exists in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php on line 181
+Stack Trace:
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:181
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Util/AlterInstructions.php:123
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:606
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:981
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php:484
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/TimedOutputAdapter.php:434
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php:484
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Plan/Plan.php:170
+- /var/www/html/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php:69
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Plan/Plan.php:171
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/ProxyAdapter.php:122
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php:105
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:383
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:529
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Rollback.php:124
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Rollback.php:81
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-13 08:48:46 Error: [Error] Call to undefined method RenamingTable::down() in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php on line 112
+Stack Trace:
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:383
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:529
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Rollback.php:124
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Rollback.php:81
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-13 08:50:12 Error: [Error] Call to undefined method RenamingTable::down() in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php on line 112
+Stack Trace:
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:383
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:529
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Rollback.php:124
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Rollback.php:81
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-13 08:51:27 Error: [Error] Call to undefined method RenamingTable::down() in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php on line 112
+Stack Trace:
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:383
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:529
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Rollback.php:124
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Rollback.php:81
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-13 08:55:44 Error: [Error] Call to undefined method DropOrderStatus::down() in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php on line 112
+Stack Trace:
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:383
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:529
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Rollback.php:124
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Rollback.php:81
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-13 09:00:37 Error: [Error] Call to undefined method RenamingTable::down() in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php on line 112
+Stack Trace:
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:383
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:529
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Rollback.php:124
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Rollback.php:81
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-13 09:01:32 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'ishop-v2.order' in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php on line 181
+Stack Trace:
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:181
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Util/AlterInstructions.php:123
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:606
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:981
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php:484
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/TimedOutputAdapter.php:434
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php:484
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Plan/Plan.php:170
+- /var/www/html/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php:69
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Plan/Plan.php:171
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/ProxyAdapter.php:122
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php:105
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:383
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:529
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Rollback.php:124
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Rollback.php:81
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-13 09:02:53 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'ishop-v2.order' in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php on line 181
+Stack Trace:
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:181
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Util/AlterInstructions.php:123
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:606
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:981
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php:484
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/TimedOutputAdapter.php:434
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php:484
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Plan/Plan.php:170
+- /var/www/html/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php:69
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Plan/Plan.php:171
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/ProxyAdapter.php:122
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php:105
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:383
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:529
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Rollback.php:124
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Rollback.php:81
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
