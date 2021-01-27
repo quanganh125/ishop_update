@@ -1,34 +1,4 @@
-<!--Mobile Menu start-->
-<div class="mobile-menu-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="mobile-menu">
-                    <nav id="dropdown">
-                        <ul class="mobile-menu-nav">
-                            <li><a data-toggle="collapse" href="/dashboards/index">Home Page 
-                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
-                            </li>
-                            <li><a data-toggle="collapse" href="ranking.html">Products 
-                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
-                            </li>
-                            <li><a data-toggle="collapse" href="#">Purchase Order 
-                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
-                            </li>
-                            <li><a data-toggle="collapse" href="#">History 
-                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
-                            </li>
-                            <li><a data-toggle="collapse" href="#">About us 
-                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Mobile Menu end -->
+
 
 </div>
 

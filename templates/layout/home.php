@@ -88,9 +88,9 @@
                   <ul class="metismenu" id="menu1">
                       <li class="active"><a class="has-arrow" href="/dashboards/index"><i class="icon nalika-home icon-wrap"></i><span class="mini-click-non">Home Page</span></a></li>
                       <li> <a class="has-arrow" href="/dashboards/product" aria-expanded="false"><i class="icon nalika-diamond icon-wrap"></i> <span class="mini-click-non">Product</span></a> </li> 
-                      <li><a class="has-arrow" href="history.html" aria-expanded="false"><i class="icon nalika-forms icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">Order</span></a></li>     
+                      <li><a class="has-arrow" href="/orders/index" aria-expanded="false"><i class="icon nalika-forms icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">Order</span></a></li>     
                       <li><a class="has-arrow" href="/dashboards/store" aria-expanded="false"><i class="icon nalika-table icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">My Store</span></a></li> 
-                      <li><a class="has-arrow" href="about-us.html" aria-expanded="false"><i class="icon nalika-bar-chart icon-wrap"></i> <span class="mini-click-non">About us</span></a></li>
+                      <!-- <li><a class="has-arrow" href="about-us.html" aria-expanded="false"><i class="icon nalika-bar-chart icon-wrap"></i> <span class="mini-click-non">About us</span></a></li> -->
                   </ul>
               </nav>
           </div>
@@ -121,7 +121,7 @@
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="float: right;">
                                 <div class="header-right-info">
                                     <ul class="nav navbar-nav mai-top-nav header-right-menu">  
-                                        <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon nalika-alarm" aria-hidden="true"></i><span class="indicator-nt"></span></a>
+                                        <!-- <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon nalika-alarm" aria-hidden="true"></i><span class="indicator-nt"></span></a>
                                             <div role="menu" class="notification-author dropdown-menu animated zoomIn">
                                                 <div class="notification-single-top">
                                                     <h1>Notifications</h1>
@@ -180,7 +180,7 @@
                                                     <a href="#">View All Notification</a>
                                                 </div>
                                             </div>
-                                        </li>
+                                        </li> -->
                                         <li class="nav-item">
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                     <i class="icon nalika-user"></i>
@@ -200,6 +200,38 @@
             </div>
         </div>
     </div>
+
+    <!--Mobile Menu start-->
+<div class="mobile-menu-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="mobile-menu">
+                    <nav id="dropdown">
+                        <ul class="mobile-menu-nav">
+                            <li><a href="/dashboards/index">Home Page 
+                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                            </li>
+                            <li><a href="/dashboards/product">Product
+                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                            </li>
+                            <li><a href="/orders/index">Order 
+                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                            </li>
+                            <li><a  href="/dashboards/store">My Store
+                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                            </li>
+                            <!-- <li><a data-toggle="collapse" href="#">About us 
+                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Mobile Menu end -->
 
      <?= $this->fetch('content'); ?>       <!-- content -->
    

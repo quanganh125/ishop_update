@@ -265,3 +265,39 @@ Stack Trace:
 
 
 
+2021-01-19 09:27:13 Error: [Symfony\Component\Console\Exception\CommandNotFoundException] Command "migrated" is not defined.
+
+Did you mean one of these?
+    mark_migrated
+    migrate in /var/www/html/vendor/symfony/console/Application.php on line 644
+Stack Trace:
+- /var/www/html/vendor/symfony/console/Application.php:228
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+
+2021-01-19 17:27:07 Error: [InvalidArgumentException] Could not find class "AddOrder" in file "/var/www/html/config/Migrations/20210119172430_AddOrder.php" in /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php on line 763
+Stack Trace:
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php:439
+- /var/www/html/vendor/robmorgan/phinx/src/Phinx/Console/Command/Rollback.php:124
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /var/www/html/vendor/cakephp/migrations/src/Command/Phinx/Rollback.php:81
+- /var/www/html/vendor/symfony/console/Command/Command.php:258
+- /var/www/html/vendor/symfony/console/Application.php:911
+- /var/www/html/vendor/symfony/console/Application.php:264
+- /var/www/html/vendor/symfony/console/Application.php:140
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /var/www/html/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/bin/cake.php:12
+
+
+

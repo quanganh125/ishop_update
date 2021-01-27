@@ -1,5 +1,6 @@
 <?php
     $item = $product->toArray()[0];
+    $profile = $this->request->getSession()->read('User')
 ?>
  <div class="breadcome-area">
     <div class="container-fluid">
@@ -58,6 +59,7 @@
                                         <h5>remaining number</h5>
                                         <span class="red"><?=$item->total?></span>
                                     </div>
+                                    <?=$this->Form->create(null, ['url' => 'orders/add/'])?>
                                     <div class="color-quality">
                                         <h4>Quantity</h4>
                                         <div class="quantity">
@@ -67,10 +69,14 @@
                                         </div>
                                     </div>
                                     <div class="clear"></div>
-                                    <div class="single-pro-button" style="margin: 2%;">
-                                            <?= $this->Form->button('Click to buy',array( 'class' => 'btn-info custom-btn'));?>
-                                       
+                                    <div class="single-pro-button" style="margin: 2%;">  
+                                        <input type="number" value="<?=$item->id?>" name="product_id" hidden>
+                                        <input type="number" value="<?=$profile->id?>" name="customer_id" hidden>
+                                        <input type="number" value="1" name="status_id" hidden>
+                                        <input type="text" value="success" name="description" hidden>                 
+                                        <button class="btn-info custom-btn" onclick="return confirm('Are you sure you want to buy this item?');" >Click to buy</button>
                                     </div>
+                                    <?=$this->Form->end();?>
                                     <div class="clear"></div>
                                 </div>
                                 <div class="single-pro-cn">

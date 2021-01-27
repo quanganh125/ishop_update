@@ -3,7 +3,6 @@
 use App\View\AppView;
 
 function printElement($arg,$obj){   
-
     $temp = $arg->toArray();
     $rowNumber = floor(count($temp) / 3);  // 1 row contains 3 products
     for ( $i = 0; $i<= $rowNumber; $i++){

@@ -14,31 +14,17 @@ class AddOrderStatus extends AbstractMigration
      */
     public function up()
     {
-        $table = $this->table('orders');
-        $table->addColumn('name', 'string', [
+        $this->table('statuses')
+        ->addColumn('description', 'string', [
             'default' => null,
-            'limit' => 255,
+            'limit' => 50,
             'null' => false,
-        ]);
-        $table->addColumn('description', 'text', [
-            'default' => null,
-            'null' => false,
-        ]);
-        $table->addColumn('created', 'datetime', [
-            'default' => null,
-            'null' => false,
-        ]);
-        $table->addColumn('modified', 'datetime', [
-            'default' => null,
-            'null' => false,
-        ]);
-        $table->addColumn('status_id', 'integer', [
-            'default' => 1,
-            'null' => false,
-        ]);
-        $table->create();
+        ])
+        ->create();
     }
 
     public function down()
-    {}
+    {
+        $this->table('statuses')->drop()->save();
+    }
 }

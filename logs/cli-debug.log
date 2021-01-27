@@ -1,0 +1,42 @@
+2021-01-19 10:29:37 Notice: Notice (8): Undefined property: Migrations\Table::$addFo in [/var/www/html/config/Migrations/20210113083531_AddOrder.php, line 37]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+AddOrder::up() - ROOT/config/Migrations/20210113083531_AddOrder.php, line 37
+Phinx\Migration\Manager\Environment::executeMigration() - ROOT/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php, line 112
+Phinx\Migration\Manager::executeMigration() - ROOT/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php, line 383
+Phinx\Migration\Manager::migrate() - ROOT/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php, line 356
+Phinx\Console\Command\Migrate::execute() - ROOT/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php, line 123
+Migrations\Command\Phinx\Migrate::parentExecute() - ROOT/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php, line 37
+Migrations\Command\Phinx\Migrate::execute() - ROOT/vendor/cakephp/migrations/src/Command/Phinx/Migrate.php, line 85
+Symfony\Component\Console\Command\Command::run() - ROOT/vendor/symfony/console/Command/Command.php, line 258
+Symfony\Component\Console\Application::doRunCommand() - ROOT/vendor/symfony/console/Application.php, line 911
+Symfony\Component\Console\Application::doRun() - ROOT/vendor/symfony/console/Application.php, line 264
+Symfony\Component\Console\Application::run() - ROOT/vendor/symfony/console/Application.php, line 140
+Migrations\Command\MigrationsCommand::execute() - ROOT/vendor/cakephp/migrations/src/Command/MigrationsCommand.php, line 126
+Cake\Console\BaseCommand::run() - CORE/src/Console/BaseCommand.php, line 179
+Migrations\Command\MigrationsCommand::run() - ROOT/vendor/cakephp/migrations/src/Command/MigrationsCommand.php, line 198
+Cake\Console\CommandRunner::runCommand() - CORE/src/Console/CommandRunner.php, line 336
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 171
+[main] - ROOT/bin/cake.php, line 12
+
+2021-01-19 10:32:46 Notice: Notice (8): Undefined property: Migrations\Table::$addFo in [/var/www/html/config/Migrations/20210113083531_AddOrder.php, line 37]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+AddOrder::up() - ROOT/config/Migrations/20210113083531_AddOrder.php, line 37
+Phinx\Migration\Manager\Environment::executeMigration() - ROOT/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php, line 112
+Phinx\Migration\Manager::executeMigration() - ROOT/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php, line 383
+Phinx\Migration\Manager::migrate() - ROOT/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php, line 356
+Phinx\Console\Command\Migrate::execute() - ROOT/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php, line 123
+Migrations\Command\Phinx\Migrate::parentExecute() - ROOT/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php, line 37
+Migrations\Command\Phinx\Migrate::execute() - ROOT/vendor/cakephp/migrations/src/Command/Phinx/Migrate.php, line 85
+Symfony\Component\Console\Command\Command::run() - ROOT/vendor/symfony/console/Command/Command.php, line 258
+Symfony\Component\Console\Application::doRunCommand() - ROOT/vendor/symfony/console/Application.php, line 911
+Symfony\Component\Console\Application::doRun() - ROOT/vendor/symfony/console/Application.php, line 264
+Symfony\Component\Console\Application::run() - ROOT/vendor/symfony/console/Application.php, line 140
+Migrations\Command\MigrationsCommand::execute() - ROOT/vendor/cakephp/migrations/src/Command/MigrationsCommand.php, line 126
+Cake\Console\BaseCommand::run() - CORE/src/Console/BaseCommand.php, line 179
+Migrations\Command\MigrationsCommand::run() - ROOT/vendor/cakephp/migrations/src/Command/MigrationsCommand.php, line 198
+Cake\Console\CommandRunner::runCommand() - CORE/src/Console/CommandRunner.php, line 336
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 171
+[main] - ROOT/bin/cake.php, line 12
+
