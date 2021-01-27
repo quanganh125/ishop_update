@@ -87,10 +87,10 @@
               <nav class="sidebar-nav left-sidebar-menu-pro">
                   <ul class="metismenu" id="menu1">
                       <li class="active"><a class="has-arrow" href="/dashboards/index"><i class="icon nalika-home icon-wrap"></i><span class="mini-click-non">Home Page</span></a></li>
-                      <li> <a class="has-arrow" href="/dashboards/product" aria-expanded="false"><i class="icon nalika-diamond icon-wrap"></i> <span class="mini-click-non">Product</span></a> </li> 
-                      <li><a class="has-arrow" href="/orders/index" aria-expanded="false"><i class="icon nalika-forms icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">Order</span></a></li>     
+                      <li> <a class="has-arrow" href="/dashboards/product" aria-expanded="false"><i class="icon nalika-diamond icon-wrap"></i> <span class="mini-click-non">Products</span></a> </li> 
+                      <li><a class="has-arrow" href="/orders/purchase" aria-expanded="false"><i class="icon nalika-forms icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">Purchase Orders</span></a></li>     
                       <li><a class="has-arrow" href="/dashboards/store" aria-expanded="false"><i class="icon nalika-table icon-wrap" style="color:#fff; width: 20px; height:auto;"></i> <span class="mini-click-non">My Store</span></a></li> 
-                      <!-- <li><a class="has-arrow" href="about-us.html" aria-expanded="false"><i class="icon nalika-bar-chart icon-wrap"></i> <span class="mini-click-non">About us</span></a></li> -->
+                      <li><a class="has-arrow" href="/orders/sales" aria-expanded="false"><i class="icon nalika-bar-chart icon-wrap"></i> <span class="mini-click-non">Sales Orders</span></a></li>
                   </ul>
               </nav>
           </div>
@@ -212,13 +212,16 @@
                             <li><a href="/dashboards/index">Home Page 
                                 <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
                             </li>
-                            <li><a href="/dashboards/product">Product
+                            <li><a href="/dashboards/product">Products
                                 <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
                             </li>
-                            <li><a href="/orders/index">Order 
+                            <li><a href="/orders/index">Purchase Orders
                                 <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
                             </li>
                             <li><a  href="/dashboards/store">My Store
+                                <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                            </li>
+                            <li><a href="/orders/index">Sales Orders
                                 <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
                             </li>
                             <!-- <li><a data-toggle="collapse" href="#">About us 

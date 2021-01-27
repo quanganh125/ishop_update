@@ -27,7 +27,7 @@ class OrdersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function index()
+    public function purchase()
     {
         $this->paginate = [
             'contain' => ['Products', 'Users', 'Statuses'],
@@ -50,6 +50,34 @@ class OrdersController extends AppController
         $cancelled_orders = $this->paginate($this->Orders->findByStatusId(4)
                                                         ->select()
                                                         ->where(['customer_id' => $user_id])
+                                                        ->order(['created' => 'DESC']));
+
+        $this->set(compact('pending_orders','delivered_orders','success_orders','cancelled_orders'));
+    }
+
+    public function sales()
+    {
+        $this->paginate = [
+            'contain' => ['Products', 'Users', 'Statuses'],
+            // 'maxLimit' => 10
+        ];
+        $user_id = $this->request->getSession()->read('User.id'); 
+        $pending_orders = $this->paginate($this->Orders->findByStatusId(1)
+                                                    ->select()
+                                                    ->where(['Products.user_id' => $user_id])
+                                                    ->order(['created' => 'DESC']));
+
+        $delivered_orders = $this->paginate($this->Orders->findByStatusId(2)
+                                                        ->select()
+                                                        ->where(['Products.user_id' => $user_id])
+                                                        ->order(['created' => 'DESC']));
+        $success_orders = $this->paginate($this->Orders->findByStatusId(3)
+                                                        ->select()
+                                                        ->where(['Products.user_id' => $user_id])
+                                                        ->order(['created' => 'DESC']));
+        $cancelled_orders = $this->paginate($this->Orders->findByStatusId(4)
+                                                        ->select()
+                                                        ->where(['Products.user_id' => $user_id])
                                                         ->order(['created' => 'DESC']));
 
         $this->set(compact('pending_orders','delivered_orders','success_orders','cancelled_orders'));
@@ -84,7 +112,7 @@ class OrdersController extends AppController
             if ($this->Orders->save($order)) {
                 $this->Flash->success(__('The order has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'purchase']);
             }
             $this->Flash->error(__('The order could not be saved. Please, try again.'));
         }
