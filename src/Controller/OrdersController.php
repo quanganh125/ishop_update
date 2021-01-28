@@ -83,22 +83,6 @@ class OrdersController extends AppController
         $this->set(compact('pending_orders','delivered_orders','success_orders','cancelled_orders'));
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id Order id.
-     * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $order = $this->Orders->get($id, [
-            'contain' => ['Products', 'Users', 'Statuses'],
-        ]);
-
-        $this->set(compact('order'));
-    }
-
     public function customerCancel($id = null)
     {
         $order = $this->Orders->get($id, [
@@ -129,11 +113,32 @@ class OrdersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
        
             if ($this->Orders->save($order)) {
-                $this->Flash->success(__('The order has been cancelled.'));
+                $this->Flash->success(__('The order has been rejected.'));
 
                 return $this->redirect(['action' => 'sales']);
             }
-            $this->Flash->error(__('The order could not be cancelled. Please, try again.'));
+            $this->Flash->error(__('The order could not be rejected. Please, try again.'));
+        }
+    }
+
+    public function sellerAccept($id = null)
+    {
+        $order = $this->Orders->get($id, [
+            'contain' => [],
+        ]);
+        $product = $this->Products->findById($order->product_id)->firstOrFail();
+        
+        $order->status_id = 2;
+        $order->description = "This order is being delierved";
+        $product->total -= $order->quantity;
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            if ($this->Orders->save($order) && $this->Products->save($product)) {
+                $this->Flash->success(__('This order is being delierved.'));
+
+                return $this->redirect(['action' => 'sales']);
+            }
+            $this->Flash->error(__('The order could not be changed. Please, try again.'));
         }
     }
 
@@ -160,50 +165,66 @@ class OrdersController extends AppController
         $this->set(compact('order', 'products', 'users', 'statuses'));
     }
 
-    /**
-     * Edit method
-     *
-     * @param string|null $id Order id.
-     * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
-        $order = $this->Orders->get($id, [
-            'contain' => [],
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $order = $this->Orders->patchEntity($order, $this->request->getData());
-            if ($this->Orders->save($order)) {
-                $this->Flash->success(__('The order has been saved.'));
+    // /**
+    //  * Edit method
+    //  *
+    //  * @param string|null $id Order id.
+    //  * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
+    //  * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+    //  */
+    // public function edit($id = null)
+    // {
+    //     $order = $this->Orders->get($id, [
+    //         'contain' => [],
+    //     ]);
+    //     if ($this->request->is(['patch', 'post', 'put'])) {
+    //         $order = $this->Orders->patchEntity($order, $this->request->getData());
+    //         if ($this->Orders->save($order)) {
+    //             $this->Flash->success(__('The order has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The order could not be saved. Please, try again.'));
-        }
-        $products = $this->Orders->Products->find('list', ['limit' => 200]);
-        $users = $this->Orders->Users->find('list', ['limit' => 200]);
-        $statuses = $this->Orders->Statuses->find('list', ['limit' => 200]);
-        $this->set(compact('order', 'products', 'users', 'statuses'));
-    }
+    //             return $this->redirect(['action' => 'index']);
+    //         }
+    //         $this->Flash->error(__('The order could not be saved. Please, try again.'));
+    //     }
+    //     $products = $this->Orders->Products->find('list', ['limit' => 200]);
+    //     $users = $this->Orders->Users->find('list', ['limit' => 200]);
+    //     $statuses = $this->Orders->Statuses->find('list', ['limit' => 200]);
+    //     $this->set(compact('order', 'products', 'users', 'statuses'));
+    // }
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id Order id.
-     * @return \Cake\Http\Response|null|void Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $order = $this->Orders->get($id);
-        if ($this->Orders->delete($order)) {
-            $this->Flash->success(__('The order has been deleted.'));
-        } else {
-            $this->Flash->error(__('The order could not be deleted. Please, try again.'));
-        }
+    //     /**
+    //  * View method
+    //  *
+    //  * @param string|null $id Order id.
+    //  * @return \Cake\Http\Response|null|void Renders view
+    //  * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+    //  */
+    // public function view($id = null)
+    // {
+    //     $order = $this->Orders->get($id, [
+    //         'contain' => ['Products', 'Users', 'Statuses'],
+    //     ]);
 
-        return $this->redirect(['action' => 'index']);
-    }
+    //     $this->set(compact('order'));
+    // }
+
+    // /**
+    //  * Delete method
+    //  *
+    //  * @param string|null $id Order id.
+    //  * @return \Cake\Http\Response|null|void Redirects to index.
+    //  * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+    //  */
+    // public function delete($id = null)
+    // {
+    //     $this->request->allowMethod(['post', 'delete']);
+    //     $order = $this->Orders->get($id);
+    //     if ($this->Orders->delete($order)) {
+    //         $this->Flash->success(__('The order has been deleted.'));
+    //     } else {
+    //         $this->Flash->error(__('The order could not be deleted. Please, try again.'));
+    //     }
+
+    //     return $this->redirect(['action' => 'index']);
+    // }
 }

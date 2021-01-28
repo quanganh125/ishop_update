@@ -31,7 +31,7 @@ class AddOrder extends AbstractMigration
                 'null' => false,
             ])
             ->addColumn('quantity', 'integer', [
-                'default' => null,
+                'default' => 0,
                 'limit' => null,
                 'null' => false,
             ])

@@ -51,8 +51,8 @@ function printOrders($orders,$obj,$flag){
     echo "<th> Customer </th>";
     echo "<th> Quantity </th>";
     echo "<th> Created</th>";
-    if ($flag == 1) echo "<th> Action </th>";
-    else if ($flag == 4) echo "<th> Status </th>";
+    if ($flag == 4) echo "<th> Status </th>";
+    else if ($flag == 1 || $flag == 2) echo "<th> Action </th>";
     echo "</tr>";
 
     foreach($orders as $order){
@@ -65,6 +65,9 @@ function printOrders($orders,$obj,$flag){
         echo '<td>' . h($order->created) .'</td>';
         if ($flag == 1){
             echo '<td>'. $obj->Form->create(null, ['url' => 'orders/seller_reject/'. $order->id]);
+            echo '<button formaction="/orders/seller_accept/'. $order->id.'" onclick="return confirm(`Are you sure you want to accept this order booked by '. $order->user->name.'?`)" 
+            title="Accept" class="pd-setting-ed" style="background:#5bc0de;padding: 2px 5px 2px 5px;width:26px">
+            <i class="fa fa-tag" aria-hidden="true"></i></button>';
             echo '<button onclick="return confirm(`Are you sure you want to reject this order booked by '. $order->user->name.'?`)" 
                     title="Reject" class="pd-setting-ed" style="background:#d9534f;padding: 2px 5px 2px 5px;width:26px">
                     <i class="fa fa-trash-o" aria-hidden="true"></i></button>';
@@ -86,7 +89,7 @@ function printOrders($orders,$obj,$flag){
                     <ul id="myTab4" class="tab-review-design">
                         <li class="active"><a href="#pending" onclick="clearSearchForm()">Wait for confirmation</a></li>
                         <li><a href="#delivered" onclick="clearSearchForm()">Being Delivered</a></li>
-                        <li><a href="#success" onclick="clearSearchForm()">Successful Orders</a></li>
+                        <li><a href="#success" onclick="clearSearchForm()">Delivered </a></li>
                         <li><a href="#cancelled" onclick="clearSearchForm()">Cancelled Orders</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content custom-product-edit">   

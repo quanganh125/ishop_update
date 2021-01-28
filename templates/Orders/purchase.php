@@ -48,7 +48,6 @@ function printOrders($orders,$obj,$flag){
     echo "<th> ID </th>";
     echo "<th> Product </th>";
     echo "<th> Image </th>";
-    // echo "<th> Status </th>";
     echo "<th> Quantity </th>";
     echo "<th> Created</th>";
     if ($flag == 1) echo "<th> Action </th>";
@@ -62,6 +61,7 @@ function printOrders($orders,$obj,$flag){
         echo '<td><img src="'. $order->product->image_link .'" alt="" /></td>';
         // echo '<td>' . $order->status->description .'</td>';
         echo '<td>' . $obj->Number->format($order->quantity) .'</td>';
+        
         echo '<td>' . $order->created .'</td>';
         if ($flag == 1){
             echo '<td>'. $obj->Form->create(null, ['url' => 'orders/customer_cancel/'. $order->id]);
@@ -86,7 +86,7 @@ function printOrders($orders,$obj,$flag){
                     <ul id="myTab4" class="tab-review-design">
                         <li class="active"><a href="#pending" onclick="clearSearchForm()">Wait for confirmation</a></li>
                         <li><a href="#delivered" onclick="clearSearchForm()">Being Delivered</a></li>
-                        <li><a href="#success" onclick="clearSearchForm()">Successful Orders</a></li>
+                        <li><a href="#success" onclick="clearSearchForm()">Received Orders</a></li>
                         <li><a href="#cancelled" onclick="clearSearchForm()">Cancelled Orders</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content custom-product-edit">   

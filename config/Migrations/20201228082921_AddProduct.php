@@ -37,8 +37,8 @@ class AddProduct extends AbstractMigration
             'limit' => null,
             'null' => false,
         ])
-        ->addColumn('total', 'string', [
-            'default' => '0',
+        ->addColumn('total', 'integer', [
+            'default' => 0,
             'limit' => 11,
             'null' => false,
         ])

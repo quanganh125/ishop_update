@@ -55,19 +55,19 @@ class DashboardsController extends AppController
     public function product(){
         $iphones = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'iphone']);
+                                ->where(['category' => 'iphone','total >' => 0]);
         $macbooks = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'macbook']);
+                                ->where(['category' => 'macbook','total >' => 0]);
         $ipads = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'ipad']);
+                                ->where(['category' => 'ipad','total >' => 0]);
         $watches = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'watch']);
+                                ->where(['category' => 'watch','total >' => 0]);
         $airpods = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'airpod']);
+                                ->where(['category' => 'airpod','total >' => 0]);
         $this->set(['iphones' => $iphones,
                     'ipads' => $ipads,
                     'macbooks' => $macbooks,
