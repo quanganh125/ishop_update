@@ -42,7 +42,8 @@
 // debug($pending_orders->toArray()[0]);
 function printOrders($orders,$obj,$flag){   
     echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">';
-    echo '<div class="product-status-wrap">';                                
+    echo '<div class="product-status-wrap">';
+    if (count($orders) >0 ){                                
     echo '<h4>Sales Orders</h4>';
     echo '<table><tr>';
     echo "<th> ID </th>";
@@ -74,10 +75,22 @@ function printOrders($orders,$obj,$flag){
             echo '</form></td>';  
         } else if ($flag == 4){
             echo '<td style="color:red">' . $order->description .'</td>';
+        } else if ($flag == 2){
+            echo '<td>'. $obj->Form->create(null, ['url' => 'orders/success_delivery/'. $order->id]);
+            echo '<button title="Successful Delivery" class="pd-setting-ed" style="background:#5bc0de;padding: 2px 5px 2px 5px;width:26px">
+                    <i class="fa fa-check" aria-hidden="true"></i></button>';
+            echo '</form></td>';  
         }                      
         echo '</tr>';
     }
-    echo  '</table></div></div>';
+    echo '</table>';
+    } else { ?>
+        <div class="empty-order">
+            <img src="/img/empty-order.png" alt="Empty Order" style="width:125px">
+            <div class='photo-name'>No orders yet</div>
+        </div>
+    <?php }
+    echo '</div></div>';
 }
 ?>
 
@@ -96,7 +109,7 @@ function printOrders($orders,$obj,$flag){
              
                         <div class="product-tab-list tab-pane fade active in" id="pending">
                             <div class="row">;
-                                <?php printOrders($pending_orders,$this,1)?>                                                                        
+                                <?php printOrders($pending_orders,$this,1);?>                                                                        
                             </div>
                         </div>
                         <div class="product-tab-list tab-pane fade" id="delivered">

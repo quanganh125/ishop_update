@@ -142,6 +142,24 @@ class OrdersController extends AppController
         }
     }
 
+    public function successDelivery($id = null)
+    {
+        $order = $this->Orders->get($id, [
+            'contain' => [],
+        ]);
+        $order->status_id = 3;
+        $order->description = "Customer has received the product.";
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            if ($this->Orders->save($order)) {
+                $this->Flash->success(__('Customer has received the product.'));
+
+                return $this->redirect(['action' => 'sales']);
+            }
+            $this->Flash->error(__('The order could not be changed. Please, try again.'));
+        }
+    }
+
     /**
      * Add method
      *

@@ -46,28 +46,31 @@ class DashboardsController extends AppController
     public function index()
     {
         $id = $this->request->getSession()->read('User.id'); 
-        $user = $this->Users->find('all')
-                            ->select()
-                            ->where(['id' => $id]);
+        $user = $this->Users->findById($id);
         $this->set(['user' => $user]);
     }
 
     public function product(){
         $iphones = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'iphone','total >' => 0]);
+                                ->where(['category' => 'iphone','total >' => 0])
+                                ->order(['modified' => 'DESC']);
         $macbooks = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'macbook','total >' => 0]);
+                                ->where(['category' => 'macbook','total >' => 0])
+                                ->order(['modified' => 'DESC']);
         $ipads = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'ipad','total >' => 0]);
+                                ->where(['category' => 'ipad','total >' => 0])
+                                ->order(['modified' => 'DESC']);
         $watches = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'watch','total >' => 0]);
+                                ->where(['category' => 'watch','total >' => 0])
+                                ->order(['modified' => 'DESC']);
         $airpods = $this->Products->find('all')
                                 ->select()
-                                ->where(['category' => 'airpod','total >' => 0]);
+                                ->where(['category' => 'airpod','total >' => 0])
+                                ->order(['modified' => 'DESC']);
         $this->set(['iphones' => $iphones,
                     'ipads' => $ipads,
                     'macbooks' => $macbooks,
