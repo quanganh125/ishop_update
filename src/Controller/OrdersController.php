@@ -99,6 +99,44 @@ class OrdersController extends AppController
         $this->set(compact('order'));
     }
 
+    public function customerCancel($id = null)
+    {
+        $order = $this->Orders->get($id, [
+            'contain' => [],
+        ]);
+        $order->status_id = 4;
+        $order->description = "This order has been cancelled by cutomer";
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+       
+            if ($this->Orders->save($order)) {
+                $this->Flash->success(__('The order has been cancelled.'));
+
+                return $this->redirect(['action' => 'purchase']);
+            }
+            $this->Flash->error(__('The order could not be cancelled. Please, try again.'));
+        }
+    }
+
+    public function sellerReject($id = null)
+    {
+        $order = $this->Orders->get($id, [
+            'contain' => [],
+        ]);
+        $order->status_id = 4;
+        $order->description = "This order has been rejected by seller";
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+       
+            if ($this->Orders->save($order)) {
+                $this->Flash->success(__('The order has been cancelled.'));
+
+                return $this->redirect(['action' => 'sales']);
+            }
+            $this->Flash->error(__('The order could not be cancelled. Please, try again.'));
+        }
+    }
+
     /**
      * Add method
      *

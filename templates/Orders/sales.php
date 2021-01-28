@@ -40,7 +40,7 @@
 
 <?php
 // debug($pending_orders->toArray()[0]);
-function printOrders($orders,$obj){   
+function printOrders($orders,$obj,$flag){   
     echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">';
     echo '<div class="product-status-wrap">';                                
     echo '<h4>Sales Orders</h4>';
@@ -48,25 +48,30 @@ function printOrders($orders,$obj){
     echo "<th> ID </th>";
     echo "<th> Product </th>";
     echo "<th> Image </th>";
-    // echo "<th> Status </th>";
+    echo "<th> Customer </th>";
     echo "<th> Quantity </th>";
     echo "<th> Created</th>";
-    echo "<th> Action </th></tr>";
+    if ($flag == 1) echo "<th> Action </th>";
+    else if ($flag == 4) echo "<th> Status </th>";
+    echo "</tr>";
 
     foreach($orders as $order){
         echo '<tr>';
         echo '<td>'. $obj->Number->format($order->id). '</td>';
         echo '<td><a href="/dashboards/detail/'.$order->product->id.'">' . $order->product->name .'</a></td>';
         echo '<td><img src="'. $order->product->image_link .'" alt="" /></td>';
-        // echo '<td>' . $order->status->description .'</td>';
+        echo '<td>' . $order->user->name .'</td>';
         echo '<td>' . $obj->Number->format($order->quantity) .'</td>';
         echo '<td>' . h($order->created) .'</td>';
-        echo '<td>'. $obj->Form->create();
-        echo '<button formaction="" onclick="return confirm(`Are you sure you want to cancelled this order?`)" 
-                title="Cancelled" class="pd-setting-ed" style="background:#d9534f;padding: 2px 5px 2px 5px;width:26px">
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
-            </button>';
-        echo '</form></td>';                  
+        if ($flag == 1){
+            echo '<td>'. $obj->Form->create(null, ['url' => 'orders/seller_reject/'. $order->id]);
+            echo '<button onclick="return confirm(`Are you sure you want to reject this order booked by '. $order->user->name.'?`)" 
+                    title="Reject" class="pd-setting-ed" style="background:#d9534f;padding: 2px 5px 2px 5px;width:26px">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i></button>';
+            echo '</form></td>';  
+        } else if ($flag == 4){
+            echo '<td style="color:red">' . $order->description .'</td>';
+        }                      
         echo '</tr>';
     }
     echo  '</table></div></div>';
@@ -88,22 +93,22 @@ function printOrders($orders,$obj){
              
                         <div class="product-tab-list tab-pane fade active in" id="pending">
                             <div class="row">;
-                                <?php printOrders($pending_orders,$this)?>                                                                        
+                                <?php printOrders($pending_orders,$this,1)?>                                                                        
                             </div>
                         </div>
                         <div class="product-tab-list tab-pane fade" id="delivered">
                             <div class="row">;
-                                <?php printOrders($delivered_orders,$this)?>   
+                                <?php printOrders($delivered_orders,$this,2)?>   
                             </div>               
                         </div>
                         <div class="product-tab-list tab-pane fade" id="success">
                             <div class="row">;
-                                <?php printOrders($success_orders,$this)?>
+                                <?php printOrders($success_orders,$this,3)?>
                             </div>
                         </div>
                         <div class="product-tab-list tab-pane fade" id="cancelled">
                             <div class="row">;
-                                <?php printOrders($cancelled_orders,$this)?>
+                                <?php printOrders($cancelled_orders,$this,4)?>
                             </div>
                         </div>
                     </div>
